@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My first Web Page</title>
-  </head>
-  <body>
-    <h1>Geoff's First Web Page</h1>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, arcu ut viverra efficitur, orci ligula scelerisque turpis, non feugiat urna dolor nec massa. Phasellus ac fermentum quam, sit amet dignissim libero. Donec malesuada interdum ornare. Morbi dapibus posuere erat, sagittis iaculis massa lacinia sit amet. Duis condimentum est ac quam eleifend, eget eleifend ex aliquam. Nulla vel dictum risus, sit amet tempus ipsum. Ut id luctus justo. Duis vel arcu tincidunt justo venenatis euismod id vel mi. Pellentesque dui diam, porttitor vitae faucibus sit amet, egestas ut nulla. Morbi velit quam, efficitur id dignissim et, tempus vitae neque. Pellentesque ultrices vitae tellus et sodales.
-    </p>
-    <p>
-    Aenean blandit orci vel ipsum sagittis, sed sodales lorem ultrices. Curabitur eu erat purus. Sed feugiat nisi eu mauris scelerisque, at sodales libero vestibulum. Mauris velit ligula, dignissim ut venenatis eget, imperdiet vel magna. Vivamus nec urna in augue eleifend condimentum id eget dui. Phasellus sapien lectus, varius vitae vestibulum quis, dictum ac felis. Phasellus in semper risus, accumsan commodo metus. Aliquam augue erat, cursus ac augue sed, vehicula elementum nisi. Aenean in mauris eleifend, eleifend ipsum tincidunt, mattis sem. Vestibulum vehicula ut ligula in vehicula. Duis nec pharetra magna. In ac ipsum ultrices, commodo magna a, egestas mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam ac nulla et ipsum venenatis molestie. Pellentesque a fringilla nibh.
-    </p>
-    <p>
-    Vestibulum ullamcorper, neque vitae porta congue, est metus eleifend odio, a dictum dui quam id lectus. Aliquam interdum rhoncus sem in malesuada. In quis blandit massa, vitae bibendum dui. Proin non finibus mi. Etiam eu eros eu arcu aliquam semper. Praesent pretium sit amet sem nec suscipit. Suspendisse potenti. Sed eu mauris lectus. Phasellus ac dapibus justo.
-    </p>
-  </body>
+<head>
+	
+	<title>My First Web Page</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+	
+</head>
+<body>
+
+
+
+<div id="mapid" style="width: 600px; height: 400px;"></div>
+<script>
+
+	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+
+</script>
+
+
+
+</body>
 </html>

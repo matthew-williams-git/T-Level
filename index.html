@@ -41,7 +41,15 @@
 
         var marker = L.marker([51.14471, -2.69866]).addTo(mymap);
 	var college = L.marker([51.129852, -2.7334955]).addTo(mymap);
-	var college1 = L.marker([51.129952, -2.7334955]).addTo(mymap);
+	L.polygon([
+		[51.130054, -2.733655],
+		[51.130057, -2.733655],
+		[51.130057, -2.733430],
+		[51.130104, -2.733430],
+		[51.130104, -2.732947],
+		[51.129704, -2.733365],
+		[51.129700, -2.733607]
+	]).addTo(mymap).bindPopup("This is C block");
 	marker.bindPopup("<img class='popup' src='tor.jpg'/><br /><b>Glastonbury Tor</b>").openPopup();
 	college.bindPopup("<b>C Block</b><br>Strode College").openPopup();
 </script>
